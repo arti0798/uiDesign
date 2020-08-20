@@ -1,0 +1,20 @@
+<head>
+<link rel="stylesheet" href="password.css">
+</head>
+<div class="container">
+  <header>Password Strength Indicator</header>
+  <form action="#">
+    <div class="field">
+      <input onkeyup="trigger()" type="password" placeholder="Type password">
+      <span class="showBtn">SHOW</span>
+    </div>
+    <div class="indicator">
+      <span class="weak"></span>
+      <span class="medium"></span>
+      <span class="strong"></span>
+    </div>
+    <div class="text">
+    </div>
+  </form>
+</div>
+<script src="password.js"></script>
