@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #ffffff;
+    overflow: hidden;
+}
+
+img {
+    height: 20px;
+    width: 20px;
+}
+
+nav {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+nav .drop-btn {
+    width: 300px;
+    background: #ffffff;
+    border-radius: 15px;
+    line-height: 55px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #364f6b;
+    padding: 0 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+nav .drop-btn span {
+    float: right;
+    line-height: 50px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+nav .tooltip {
+    position: absolute;
+    right: 20px;
+    bottom: -20px;
+    height: 15px;
+    width: 15px;
+    background: #ffffff;
+    transform: rotate(45deg);
+    display: none;
+}
+
+nav .tooltip.show {
+    display: block;
+}
+
+nav .wrapper {
+    position: absolute;
+    top: 65px;
+    display: flex;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 15px;
+    background: #ffffff;
+    display: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+nav .wrapper.show {
+    display: block;
+    display: flex;
+}
+
+.wrapper ul {
+    width: 400px;
+    list-style: none;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.wrapper ul li {
+    line-height: 55px;
+}
+
+.wrapper ul li a {
+    position: relative;
+    color: #364f6b;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 0 10px;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    border-radius: 8px;
+    align-items: center;
+    text-decoration: none;
+}
+
+.wrapper ul li:hover a {
+    background: #ffffff;
+    color: #364f6b;
+}
+
+.wrapper ul li a:hover .icon {
+    background: #c5e3f6;
+    transform: rotate(360deg) scale(1.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+ul li a .icon {
+    height: 40px;
+    width: 40px;
+    margin-right: 13px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li a .icon span {
+    line-height: 45px;
+    font-size: 20px;
+    color: #364f6b;
+}
+
+ul li a:hover .icon span {
+    color: #364f6b;
+}
+
+ul li a i {
+    position: absolute;
+    right: 10px;
+    font-size: 25px;
+    pointer-events: none;
+}
+
+.wrapper ul.setting-drop,
+.wrapper ul.help-drop {
+    display: none;
+    margin: 0 auto;
+    position: absolute;
+}
+
+.wrapper .arrow {
+    padding-left: 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #364f6b;
+    cursor: pointer;
+}
+
+.wrapper .arrow span {
+    margin-right: 15px;
+}
