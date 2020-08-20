@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    display: grid;
+    height: 100%;
+    place-items: center;
+    text-align: center;
+    background: #9c1de7;
+}
+
+
+/* body {
+    background: #9c1de7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    min-height: 100vh;
+  } */
+
+.navHome {
+    border-radius: 50px;
+    width: 55vw;
+    height: 60px;
+    line-height: 60px;
+    background: #fff;
+    border: none;
+    outline: none;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.navHome nav {
+    display: flex;
+    position: relative;
+}
+
+.navHome nav label {
+    text-align: center;
+    z-index: 1;
+    flex: 1;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.navHome nav label a {
+    z-index: -1;
+    position: relative;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #000;
+    transition: color 0.6s ease;
+}
+
+.navHome nav #home:checked~label.home a,
+.navHome nav #phone:checked~label.phone a,
+.navHome nav #mail:checked~label.mail a,
+.navHome nav #user:checked~label.user a,
+.navHome nav #login:checked~label.login a {
+    color: #fff;
+}
+
+.navHome nav label a i {
+    font-size: 25px;
+    margin: 0 7px;
+}
+
+.navHome nav .tab {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 20%;
+    bottom: 0;
+    border-radius: 50px;
+    background-color: #9c1de7;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.navHome nav input {
+    display: none;
+}
+
+.navHome nav #home:checked~label.home a {
+    color: #fff;
+}
+
+.navHome nav #phone:checked~.tab {
+    left: 20%;
+}
+
+.navHome nav #mail:checked~.tab {
+    left: 40%;
+}
+
+.navHome nav #user:checked~.tab {
+    left: 60%;
+}
+
+.navHome nav #login:checked~.tab {
+    left: 80%;
+}
